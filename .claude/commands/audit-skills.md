@@ -2,7 +2,7 @@
 
 执行步骤：
 
-1. **列出所有 skill 文件**：读取 `CLAUDE.md` 索引，再扫描 `skills/` 目录，取两者并集，提取每个文件的 `name` 和 `last_updated` 字段。
+1. **列出所有 skill 文件**：读取 `CLAUDE.md` 索引，再扫描 `skills/` 目录下各子目录的 `SKILL.md`，取两者并集，提取每个文件的 `name` 和 `last_updated` 字段。
 
 2. **标记过时文件**：将 `last_updated` 距今超过 30 天的文件标记为 ⚠️ 可能过时，需要确认内容是否仍然适用。
 
@@ -20,14 +20,14 @@
 
 | 文件 | last_updated | 状态 |
 |------|-------------|------|
-| skills/xxx.md | YYYY-MM-DD | ✅ 正常 |
-| skills/yyy.md | YYYY-MM-DD | ⚠️ 超过 30 天未更新 |
+| skills/xxx/SKILL.md | YYYY-MM-DD | ✅ 正常 |
+| skills/yyy/SKILL.md | YYYY-MM-DD | ⚠️ 超过 30 天未更新 |
 
 ### 重叠检查
 
 | 文件 A | 文件 B | 重叠内容 | 建议 |
 |--------|--------|----------|------|
-| skills/a.md | skills/b.md | 描述重叠点 | 建议合并 / 保持独立 |
+| skills/a/SKILL.md | skills/b/SKILL.md | 描述重叠点 | 建议合并 / 保持独立 |
 
 ### 结论
 

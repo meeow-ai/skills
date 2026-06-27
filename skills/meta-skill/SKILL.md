@@ -19,11 +19,11 @@ last_updated: 2026-06-26
 
 ## 文件格式规范
 
-每个 skill 文件必须以 YAML frontmatter 开头，包含以下字段：
+每个 skill 存放于 `skills/<名称>/SKILL.md`，必须以 YAML frontmatter 开头：
 
 ```
 ---
-name: <与文件名一致的标识符>
+name: <与目录名一致的标识符>
 trigger: <一句话说明：在什么情况下应该读这个文件>
 last_updated: <YYYY-MM-DD>
 ---
@@ -34,7 +34,7 @@ last_updated: <YYYY-MM-DD>
 ## 更新时机
 
 **新增 skill：**
-当某个做法在两个以上不同场景中被验证有效，或预见到会被反复用到时，立即创建文件并在 `CLAUDE.md` 索引中添加一行。
+当某个做法在两个以上不同场景中被验证有效，或预见到会被反复用到时，创建 `skills/<名称>/SKILL.md` 并在 `CLAUDE.md` 索引中添加一行。
 
 **修改现有 skill：**
 - 发现原有规则不够准确或出现例外时
